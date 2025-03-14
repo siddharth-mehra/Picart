@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@clerk/react-router": "^1.1.5",
     "@radix-ui/react-slot": "^1.1.2",
+    "@reduxjs/toolkit": "^2.6.1",
     "@tailwindcss/vite": "^4.0.14",
     "axios": "^1.8.3",
     "class-variance-authority": "^0.7.1",
@@ -18,6 +20,7 @@
     "lucide-react": "^0.479.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.3.0",
     "tailwind-merge": "^3.0.2",
     "tailwindcss": "^4.0.14",
