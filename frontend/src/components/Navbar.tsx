@@ -4,8 +4,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import {useDispatch} from 'react-redux'
 import { useUser } from "@clerk/clerk-react";
 import {setUser,logout} from '../store/userSlice'
-import SignInPage from "./sign-in";
 import { Button } from "./ui/button";
+
 
 const Navbar = () => { 
   const location = useLocation();
@@ -32,7 +32,7 @@ const Navbar = () => {
 
     if (!isLoaded) return null;
 
-    const handleSignInClick=()=>
+    const handleSignInClick=()=>{
         navigate("/sign-in")
     }
 
@@ -52,6 +52,5 @@ const Navbar = () => {
     </header>
   );
 };
-
 export default Navbar;
 
