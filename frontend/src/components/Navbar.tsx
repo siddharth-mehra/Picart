@@ -4,10 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import {useDispatch} from 'react-redux'
 import { useUser } from "@clerk/clerk-react";
 import {setUser,logout} from '../store/userSlice'
-import SignInPage from "./sign-in";
 import { Button } from "./ui/button";
-
-
 
 const Navbar = () => { 
   const location = useLocation();
@@ -39,9 +36,11 @@ const Navbar = () => {
     }
 
   return (
-    <header className={`flex w-full justify-between items-center px-4 py-4 ${isHidden ? "hidden" : ""}`}>
-      <h1>Picart</h1>
-      <nav className="text-zinc-400">
+    <div className="flex items-center justify-between py-4 px-2">
+      <p className="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-500">
+        Navbar
+      </p>
+       <nav className="text-zinc-400">
         <SignedOut>
            <Button onClick={handleSignInClick}>
                 Sign In
@@ -51,7 +50,9 @@ const Navbar = () => {
           <UserButton />
         </SignedIn>
       </nav>
-    </header>
+    </div>
+     
+    
   );
 }
 export default Navbar;
