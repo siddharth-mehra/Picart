@@ -7,6 +7,8 @@ import {setUser,logout} from '../store/userSlice'
 import SignInPage from "./sign-in";
 import { Button } from "./ui/button";
 
+
+
 const Navbar = () => { 
   const location = useLocation();
   const [isHidden, setIsHidden] = useState(false);
@@ -32,7 +34,7 @@ const Navbar = () => {
 
     if (!isLoaded) return null;
 
-    const handleSignInClick=()=>
+    const handleSignInClick:()=>any=()=>{
         navigate("/sign-in")
     }
 
@@ -51,7 +53,6 @@ const Navbar = () => {
       </nav>
     </header>
   );
-};
-
+}
 export default Navbar;
 
