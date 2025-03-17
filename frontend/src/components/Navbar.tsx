@@ -41,7 +41,7 @@ const Navbar = () => {
     }
 
   return (
-    <motion.div className={`w-full fixed z-[999] left-1/2 transform -translate-x-1/2 max-w-[1280px] mx-auto ${isHidden==true?"hidden":"block"} `}
+    <motion.div className={` w-full fixed z-[999] left-1/2 transform -translate-x-1/2 max-w-[1280px] mx-auto ${isHidden==true?"hidden":"block"} `}
     initial={{ opacity: 0, scale: 0 }}
     animate={{ opacity: 1, scale: 1 }}
     transition={{
